@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CmdQueue", "CmdQueue.csproj", "{4F1E1186-9E34-4C30-9441-41F20D7DF738}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "CmdQueueSetup", "SetupProject\CmdQueueSetup\CmdQueueSetup.vdproj", "{BDE1BEA0-5E48-4EEB-9571-8C82F255F64D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4F1E1186-9E34-4C30-9441-41F20D7DF738}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F1E1186-9E34-4C30-9441-41F20D7DF738}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F1E1186-9E34-4C30-9441-41F20D7DF738}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F1E1186-9E34-4C30-9441-41F20D7DF738}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDE1BEA0-5E48-4EEB-9571-8C82F255F64D}.Debug|Any CPU.ActiveCfg = Debug
+		{BDE1BEA0-5E48-4EEB-9571-8C82F255F64D}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A9C039C2-03A2-40BA-9292-136963174875}
+	EndGlobalSection
+EndGlobal
