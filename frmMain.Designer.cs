@@ -40,13 +40,13 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.txtStartIn = new System.Windows.Forms.TextBox();
 			this.grpAddJob = new System.Windows.Forms.GroupBox();
+			this.btnOpenFile = new System.Windows.Forms.Button();
+			this.btnBrowseStartIn = new System.Windows.Forms.Button();
 			this.grpCurrentQueue = new System.Windows.Forms.GroupBox();
 			this.lblVersion = new System.Windows.Forms.Label();
 			this.lblWebURL = new System.Windows.Forms.LinkLabel();
-			this.btnBrowseStartIn = new System.Windows.Forms.Button();
 			this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
 			this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-			this.btnOpenFile = new System.Windows.Forms.Button();
 			this.grpAddJob.SuspendLayout();
 			this.grpCurrentQueue.SuspendLayout();
 			this.SuspendLayout();
@@ -58,7 +58,7 @@
 			this.btnAdd.Location = new System.Drawing.Point(492, 102);
 			this.btnAdd.Name = "btnAdd";
 			this.btnAdd.Size = new System.Drawing.Size(59, 23);
-			this.btnAdd.TabIndex = 5;
+			this.btnAdd.TabIndex = 6;
 			this.btnAdd.Text = "Add Job";
 			this.btnAdd.UseVisualStyleBackColor = true;
 			this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -144,7 +144,7 @@
 			this.txtName.Location = new System.Drawing.Point(126, 48);
 			this.txtName.Name = "txtName";
 			this.txtName.Size = new System.Drawing.Size(425, 21);
-			this.txtName.TabIndex = 2;
+			this.txtName.TabIndex = 3;
 			// 
 			// label1
 			// 
@@ -198,7 +198,7 @@
 			this.txtStartIn.Location = new System.Drawing.Point(126, 75);
 			this.txtStartIn.Name = "txtStartIn";
 			this.txtStartIn.Size = new System.Drawing.Size(392, 21);
-			this.txtStartIn.TabIndex = 3;
+			this.txtStartIn.TabIndex = 4;
 			// 
 			// grpAddJob
 			// 
@@ -219,6 +219,28 @@
 			this.grpAddJob.TabIndex = 13;
 			this.grpAddJob.TabStop = false;
 			this.grpAddJob.Text = "Add Job to Queue";
+			// 
+			// btnOpenFile
+			// 
+			this.btnOpenFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnOpenFile.Location = new System.Drawing.Point(524, 20);
+			this.btnOpenFile.Name = "btnOpenFile";
+			this.btnOpenFile.Size = new System.Drawing.Size(28, 23);
+			this.btnOpenFile.TabIndex = 2;
+			this.btnOpenFile.Text = "...";
+			this.btnOpenFile.UseVisualStyleBackColor = true;
+			this.btnOpenFile.Click += new System.EventHandler(this.btnOpenFile_Click);
+			// 
+			// btnBrowseStartIn
+			// 
+			this.btnBrowseStartIn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnBrowseStartIn.Location = new System.Drawing.Point(524, 74);
+			this.btnBrowseStartIn.Name = "btnBrowseStartIn";
+			this.btnBrowseStartIn.Size = new System.Drawing.Size(28, 23);
+			this.btnBrowseStartIn.TabIndex = 5;
+			this.btnBrowseStartIn.Text = "...";
+			this.btnBrowseStartIn.UseVisualStyleBackColor = true;
+			this.btnBrowseStartIn.Click += new System.EventHandler(this.btnBrowseStartIn_Click);
 			// 
 			// grpCurrentQueue
 			// 
@@ -263,31 +285,9 @@
 			this.lblWebURL.TextAlign = System.Drawing.ContentAlignment.TopRight;
 			this.lblWebURL.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblWebURL_LinkClicked);
 			// 
-			// btnBrowseStartIn
-			// 
-			this.btnBrowseStartIn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnBrowseStartIn.Location = new System.Drawing.Point(524, 74);
-			this.btnBrowseStartIn.Name = "btnBrowseStartIn";
-			this.btnBrowseStartIn.Size = new System.Drawing.Size(28, 23);
-			this.btnBrowseStartIn.TabIndex = 4;
-			this.btnBrowseStartIn.Text = "...";
-			this.btnBrowseStartIn.UseVisualStyleBackColor = true;
-			this.btnBrowseStartIn.Click += new System.EventHandler(this.btnBrowseStartIn_Click);
-			// 
 			// openFileDialog
 			// 
 			this.openFileDialog.FileName = "openFileDialog";
-			// 
-			// btnOpenFile
-			// 
-			this.btnOpenFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnOpenFile.Location = new System.Drawing.Point(524, 20);
-			this.btnOpenFile.Name = "btnOpenFile";
-			this.btnOpenFile.Size = new System.Drawing.Size(28, 23);
-			this.btnOpenFile.TabIndex = 13;
-			this.btnOpenFile.Text = "...";
-			this.btnOpenFile.UseVisualStyleBackColor = true;
-			this.btnOpenFile.Click += new System.EventHandler(this.btnOpenFile_Click);
 			// 
 			// frmMain
 			// 

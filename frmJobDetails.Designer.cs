@@ -27,6 +27,10 @@
 		private void InitializeComponent() {
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmJobDetails));
 			this.grpAddJob = new System.Windows.Forms.GroupBox();
+			this.btnOpenFile = new System.Windows.Forms.Button();
+			this.btnBrowseStartIn = new System.Windows.Forms.Button();
+			this.btnCancel = new System.Windows.Forms.Button();
+			this.txtCommand = new System.Windows.Forms.TextBox();
 			this.lblArguments = new System.Windows.Forms.Label();
 			this.txtArguments = new System.Windows.Forms.TextBox();
 			this.label3 = new System.Windows.Forms.Label();
@@ -35,12 +39,8 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.txtName = new System.Windows.Forms.TextBox();
 			this.btnSave = new System.Windows.Forms.Button();
-			this.txtCommand = new System.Windows.Forms.TextBox();
-			this.btnCancel = new System.Windows.Forms.Button();
-			this.btnBrowseStartIn = new System.Windows.Forms.Button();
 			this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
 			this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-			this.btnOpenFile = new System.Windows.Forms.Button();
 			this.grpAddJob.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -67,6 +67,51 @@
 			this.grpAddJob.TabStop = false;
 			this.grpAddJob.Text = "Edit Job";
 			// 
+			// btnOpenFile
+			// 
+			this.btnOpenFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnOpenFile.Location = new System.Drawing.Point(484, 20);
+			this.btnOpenFile.Name = "btnOpenFile";
+			this.btnOpenFile.Size = new System.Drawing.Size(28, 23);
+			this.btnOpenFile.TabIndex = 2;
+			this.btnOpenFile.Text = "...";
+			this.btnOpenFile.UseVisualStyleBackColor = true;
+			this.btnOpenFile.Click += new System.EventHandler(this.btnOpenFile_Click);
+			// 
+			// btnBrowseStartIn
+			// 
+			this.btnBrowseStartIn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnBrowseStartIn.Location = new System.Drawing.Point(484, 101);
+			this.btnBrowseStartIn.Name = "btnBrowseStartIn";
+			this.btnBrowseStartIn.Size = new System.Drawing.Size(28, 23);
+			this.btnBrowseStartIn.TabIndex = 6;
+			this.btnBrowseStartIn.Text = "...";
+			this.btnBrowseStartIn.UseVisualStyleBackColor = true;
+			this.btnBrowseStartIn.Click += new System.EventHandler(this.btnBrowseStartIn_Click);
+			// 
+			// btnCancel
+			// 
+			this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+			this.btnCancel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnCancel.Location = new System.Drawing.Point(423, 129);
+			this.btnCancel.Name = "btnCancel";
+			this.btnCancel.Size = new System.Drawing.Size(89, 23);
+			this.btnCancel.TabIndex = 21;
+			this.btnCancel.Text = "Cancel";
+			this.btnCancel.UseVisualStyleBackColor = true;
+			this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+			// 
+			// txtCommand
+			// 
+			this.txtCommand.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.txtCommand.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtCommand.Location = new System.Drawing.Point(126, 21);
+			this.txtCommand.Name = "txtCommand";
+			this.txtCommand.Size = new System.Drawing.Size(352, 21);
+			this.txtCommand.TabIndex = 1;
+			// 
 			// lblArguments
 			// 
 			this.lblArguments.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -85,7 +130,7 @@
 			this.txtArguments.Location = new System.Drawing.Point(126, 48);
 			this.txtArguments.Name = "txtArguments";
 			this.txtArguments.Size = new System.Drawing.Size(386, 21);
-			this.txtArguments.TabIndex = 2;
+			this.txtArguments.TabIndex = 3;
 			// 
 			// label3
 			// 
@@ -105,7 +150,7 @@
 			this.txtStartIn.Location = new System.Drawing.Point(126, 102);
 			this.txtStartIn.Name = "txtStartIn";
 			this.txtStartIn.Size = new System.Drawing.Size(352, 21);
-			this.txtStartIn.TabIndex = 4;
+			this.txtStartIn.TabIndex = 5;
 			// 
 			// label2
 			// 
@@ -135,7 +180,7 @@
 			this.txtName.Location = new System.Drawing.Point(126, 75);
 			this.txtName.Name = "txtName";
 			this.txtName.Size = new System.Drawing.Size(386, 21);
-			this.txtName.TabIndex = 3;
+			this.txtName.TabIndex = 4;
 			// 
 			// btnSave
 			// 
@@ -149,54 +194,9 @@
 			this.btnSave.UseVisualStyleBackColor = true;
 			this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
 			// 
-			// txtCommand
-			// 
-			this.txtCommand.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.txtCommand.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtCommand.Location = new System.Drawing.Point(126, 21);
-			this.txtCommand.Name = "txtCommand";
-			this.txtCommand.Size = new System.Drawing.Size(352, 21);
-			this.txtCommand.TabIndex = 1;
-			// 
-			// btnCancel
-			// 
-			this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-			this.btnCancel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnCancel.Location = new System.Drawing.Point(423, 129);
-			this.btnCancel.Name = "btnCancel";
-			this.btnCancel.Size = new System.Drawing.Size(89, 23);
-			this.btnCancel.TabIndex = 21;
-			this.btnCancel.Text = "Cancel";
-			this.btnCancel.UseVisualStyleBackColor = true;
-			this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-			// 
-			// btnBrowseStartIn
-			// 
-			this.btnBrowseStartIn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnBrowseStartIn.Location = new System.Drawing.Point(484, 101);
-			this.btnBrowseStartIn.Name = "btnBrowseStartIn";
-			this.btnBrowseStartIn.Size = new System.Drawing.Size(28, 23);
-			this.btnBrowseStartIn.TabIndex = 5;
-			this.btnBrowseStartIn.Text = "...";
-			this.btnBrowseStartIn.UseVisualStyleBackColor = true;
-			this.btnBrowseStartIn.Click += new System.EventHandler(this.btnBrowseStartIn_Click);
-			// 
 			// openFileDialog
 			// 
 			this.openFileDialog.FileName = "openFileDialog";
-			// 
-			// btnOpenFile
-			// 
-			this.btnOpenFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnOpenFile.Location = new System.Drawing.Point(484, 20);
-			this.btnOpenFile.Name = "btnOpenFile";
-			this.btnOpenFile.Size = new System.Drawing.Size(28, 23);
-			this.btnOpenFile.TabIndex = 22;
-			this.btnOpenFile.Text = "...";
-			this.btnOpenFile.UseVisualStyleBackColor = true;
-			this.btnOpenFile.Click += new System.EventHandler(this.btnOpenFile_Click);
 			// 
 			// frmJobDetails
 			// 
